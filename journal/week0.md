@@ -1,4 +1,4 @@
-#  Creating a billing alarm in AWS through GitPod(CLI) 
+#  Creating a billing alarm in AWS Via GitPod(CLI) 
 
 ## Create a SNS topic
 
