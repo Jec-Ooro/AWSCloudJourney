@@ -89,11 +89,7 @@ aws cloudwatch describe-alarms
   ![aws put subscribe](https://github.com/Jec-Ooro/aws-bootcamp-cruddur-2023/assets/32017967/e05f8928-4914-4fd9-aa50-c7336e051153)
 
 
-# Congratulations You Connect a Health Dashboard to SNS via EventBridge
-
-```sh
-Resources used AWS Documentation and ChatGPT
-```
+# Congratulations You Connect a Health Dashboard to SNS via EventBridge and Created a billing alaram
 
     
     
