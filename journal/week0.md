@@ -22,7 +22,7 @@ aws sns subscribe  --topic-arn TopicARN(the one you got from creating the SNS To
 After excuting the command you should get an email and hit subscribe and it should look like this 
 ![sns confirm](https://github.com/Jec-Ooro/aws-bootcamp-cruddur-2023/assets/32017967/33347616-7e59-4f7e-afca-017bfceb2012)
 
-## Create Alarm
+### Create Alarm
 
 -  Heres a link to help guide you on creating one [https://docs.aws.amazon.com/cli/latest/reference/lightsail/put-alarm.html]
 -  the command to create the alram and the paramaters I will use
@@ -40,13 +40,18 @@ aws cloudwatch describe-alarms
 
 
 
+### Logical Architecture Design
+![lucid diagram ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/23900f58-21bf-4d14-a67e-cd570fd4824d)
+
+
+
 # Challenge   
 
 ## Connect Health Dashboard to SNS via EventBridge for Real-time Service Notifications(AWS CLI via Gitpod)
 
 
 
-## Create an SNS Topic
+### Create an SNS Topic
 
 
 ```sh
@@ -56,7 +61,7 @@ aws cloudwatch describe-alarms
  ![creating sns topic for put rule to subcribe too (2)](https://github.com/Jec-Ooro/aws-bootcamp-cruddur-2023/assets/32017967/fee8f1e8-9fd2-47af-aa3c-2fd4731f2278)
  - you should get an output like that for a TopicARN if successful as seen in the image
 
-  ## Create The EventBridge Rule to detect Health Dashboard events
+  ### Create The EventBridge Rule to detect Health Dashboard events
 
 
   - The put-rule command  creates an EventBridge rule that filters for Health Dashboard events.
@@ -68,7 +73,7 @@ aws cloudwatch describe-alarms
    - The Black circle is important the ending of the command has to be in json format to work since  used to define parameters or filters when interacting with AWS services. Especially setting up EventBridge rules or filters.
 
 
-## Create a Target for the Event Rule
+### Create a Target for the Event Rule
 
 - the EventBridge rule will forward matched events to the SNS topic.
   ```sh
@@ -78,7 +83,7 @@ aws cloudwatch describe-alarms
 
 - If you can't recall your SNS Topic ARN the command to show all sns topics: "aws sns list-topics"
 
-  ## Subscribe an Endpoint to the SNS Topic
+  ### Subscribe an Endpoint to the SNS Topic
 
 - Subscribe an email address or any other endpoint to the SNS topic to receive notifications.
 
