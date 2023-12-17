@@ -1,7 +1,7 @@
 
 
 The `/journal` directory contains
-- [ ] [SCAP & STIG.md](journal/SCAP & STIG.md)
+- [ ] [SCAP & STIG.md]
 - [ ] [Week 0](journal/week0.md)
 - [ ] [Week 1](journal/week1.md)
 - [ ] [Week 2](journal/week2.md)
