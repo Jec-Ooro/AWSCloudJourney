@@ -89,7 +89,7 @@ It helps automate and streamline processes such as known vulnerability analysis,
   ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/2c199c6c-88c4-429e-98f3-762f3b4797d6)
 
 
-  ## Step 3 Importining GPO's to automate remediate
+## Step 3 Importining GPO's to automate remediate
 
 
 - we are going to run Microsofts LGPO to import the GPO's we downloaded earlier. Locate where you saved it 
@@ -99,7 +99,7 @@ It helps automate and streamline processes such as known vulnerability analysis,
 
 - Once your in the directory type lgp and hit tab to autoconplete it it should look like this:
   ```sh
-  LGPO_30 /g ""
+  LGPO.exe /g ""
   ```
   the /g flag is used to Import settings from one or more Group Policy backups anywhere
   in the quotation marks we are going to put the Path of the GPO's we downloaded their will
@@ -107,6 +107,45 @@ It helps automate and streamline processes such as known vulnerability analysis,
 
   ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/8c51f296-6b30-41e8-8476-a705cbc993c7)
 
+- i ran this command first
+  ```sh
+  LGPO>LGPO.exe /g "C:\Users\Administrator\Desktop\IT STUFF\U_STIG_GPO_Package_October_2023\DoD WinSvr 2022 MS and DC v1r4\GPOs\{0868DCD3-069B-4027-89A9-995435DC3064}"
+  ```
+  it looks like this: 
+  ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/27849903-34e3-4e39-80cf-1f64d416cde0)
+
+  next command is this:
+  ```sh
+  LGPO.exe /g "C:\Users\Administrator\Desktop\IT STUFF\U_STIG_GPO_Package_October_2023\DoD WinSvr 2022 MS and DC v1r4\GPOs\{46680758-56F4-4673-9D15-1AF560115185}"
+  ```
+  it looks like this:
+  ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/ed8544e5-0f63-4a9b-8457-a92b75739b9a)
+
+  Now since we updated the Group Policies we need to update them the command we will use is
+  ```sh
+  gpupdate /force
+  ```
+  ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/de86f73b-f725-4dff-a2c3-813da11e16fb)
+
+ ##Finally RESCAN
+
+ - we will do a SCAP rescan of our system to see how much we are in compliance from before. out goal is to get over a 90%
+ - here are the results of our rescan
+   ![Screenshot 2023-12-17 095016](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/f972b35d-49c5-44cf-8702-7eb0fdbf4235)
+
+
+
+
+
+# Congrats we successfuly SCAPED & STIGED our Windows Server 2022 over 90%  
+
+
+  
+
+  
+
+
+  
   
 
   
