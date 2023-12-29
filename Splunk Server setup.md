@@ -68,8 +68,44 @@
 
 ## Step 3 Configuring Universal Forwarder
 
-- you're going to go into settings, and under settings, you'll click forwarding and receiving. Under receive data click add new. It should look like this:
+- you're going to go into settings, and under settings, you'll click forwarding and receiving. Under receive data, click add new. It should look like this:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/d062097c-c41c-475a-af62-d6489d9857f4)
+
+- You will be prompted to enter a port number, and the port you will type in is 9997, which the forwarder will use to hit save.
+
+- Next, you will go to the Splunk webpage as we did before and download the Universal Forwarder with the Wget link, which we will plug into the command line. It should look like this:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/65bdad69-2ab5-47d2-8525-4cd4ff7ced02)
+
+- Once you get the Wget link, go into the Command line and cd to the /opt folder. This is where we will install the Universal Forwarder. It should look like this:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/c5842859-b857-455b-a092-73800b1df6d6)
+
+- Once we download it, we are going to untar the file with this command:
+  ```sh
+  sudo tar xvzf (name of the universal forwarder) -C /opt 
+  ```
+  It should look like this:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/3aed08be-e93c-442f-bc9b-e27f389db753)
+
+  - Next, you're going to cd /opt/splunkforwarder/bin and start the service, and it should look like this:
+    ```sh
+    sudo /opt/splunkforwarder/bin/splunk start
+    ```
+    ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/5edef0fc-87ed-465f-b2c6-3144a18619b3)
+    ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/8f919031-bff1-4698-9c50-668afcfe9840)
+
+  - Next, we will Configure a Forwarder connection to the Index Server. The command will be this:
+    ```sh
+    sudo /opt/splunkforwarder/bin/splunk add forward-server hostname.domain:9997
+    ```
+
+
+    
+
+  
+
+  
+
+  
 
   
 
