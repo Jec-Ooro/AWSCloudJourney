@@ -38,22 +38,41 @@
 - if it was successful, the output should look like this when you run the ls command:
 ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/7d3e2eff-6f51-4e52-8169-ef84d854e2d5)
 
-- Next we are going to untar the contents of the file in the directory with this command:
+- Next, we are going to untar the contents of the file in the directory with this command:
   ```sh
   tar -xzvC /opt -f (name of the splunk file)
   ```
-  it should look like this:
+  It should look like this:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/33385619-7354-499f-83c6-711609afa885)
 
-- once it's completed we are going to start the service and the command to do that is:
+- once it's completed, we are going to start the service, and the command to do that is:
   ```sh
   sudo /opt/splunk/bin/splunk start --accept-license
   ```
-  You are going to be prompted to put in a username and password to be able to log into the Splunk webpage. it should look like this:
+  You are going to be prompted to put in a username and password to be able to log into the Splunk webpage. It should look like this:
 
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/50e4de36-93dd-4f2e-8698-58e47ff81432)
 
   Once you have done that, you should get an output that looks like this:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/3e00ea6d-a1af-40a4-8deb-17364fce8509)
+
+- you will copy the link it gives you once the service is started, and you can input that into your web browser to access the page. I also forgot to mention that you must have port 8000 open since Splunk uses that  port number.
+- you will be prompted to enter the username and password you created. It should look like this:
+
+![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/49c26c6a-c649-48ea-bc85-55c65b60c653)
+
+- Once you log in successfully, your page should be this.  Congrats
+
+   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/20783708-56ed-4161-b376-3550fb085723)
+
+
+## Step 3 Configuring Universal Forwarder
+
+- you're going to go into settings, and under settings, you'll click forwarding and receiving. Under receive data click add new. It should look like this:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/d062097c-c41c-475a-af62-d6489d9857f4)
+
+  
+
   
 
 
