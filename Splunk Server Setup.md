@@ -86,17 +86,30 @@
   It should look like this:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/3aed08be-e93c-442f-bc9b-e27f389db753)
 
-  - Next, you're going to cd /opt/splunkforwarder/bin and start the service, and it should look like this:
+- Next, you're going to cd /opt/splunkforwarder/bin and start the service, and it should look like this:
     ```sh
     sudo /opt/splunkforwarder/bin/splunk start
     ```
     ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/5edef0fc-87ed-465f-b2c6-3144a18619b3)
     ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/8f919031-bff1-4698-9c50-668afcfe9840)
 
-  - Next, we will Configure a Forwarder connection to the Index Server. The command will be this:
+- Next, we will Configure a Forwarder connection to the Index Server. The command will be this:
     ```sh
     sudo /opt/splunkforwarder/bin/splunk add forward-server hostname.domain:9997
     ```
+- If you are successful, you will  get a message that says this:
+
+     ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/d393a2d8-4099-4617-a38d-0bca68ee1c09)
+
+- Next, we will add /var/log files to be indexed by the server. The command for that will be this:
+      ```sh
+      sudo /opt/splunkforwarder/bin/splunk add monitor /var/log
+      ```
+- If you are successful, it should look like this:
+
+    ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/a033d71a-62f6-4af0-91da-bc3bb365756d)
+
+    
 
 
     
