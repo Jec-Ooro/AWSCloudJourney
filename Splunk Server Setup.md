@@ -112,8 +112,8 @@
 - Go back to your Splunk server and click Search your data:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/d6b3cc24-a84a-446a-bc79-da785fb8920e)
 
-- Once you are in, find the data summary, click it, and if it was all successful, you should see your host with 
-  IP address and the files you wanted to be indexed in the sources tab and it should look like this:
+- Once you are in, find the data summary, click it, and if it was all successful, you should see your host with the 
+  IP address and the files you wanted to be indexed in the sources tab, and it should look like this:
 
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/372a56e0-78ea-435a-8a9f-5c05509d32ee)
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/744d0302-c778-491b-88d3-9e0224331965)
