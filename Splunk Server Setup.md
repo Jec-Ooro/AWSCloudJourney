@@ -76,7 +76,7 @@
 - Next, you will go to the Splunk webpage as we did before and download the Universal Forwarder with the Wget link, which we will plug into the command line. It should look like this:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/65bdad69-2ab5-47d2-8525-4cd4ff7ced02)
 
-- Once you get the Wget link, go into the Command line and cd to the /opt folder. This is where we will install the Universal Forwarder. It should look like this:
+- Once you get the Wget link, go into the Command line of your second EC2 and cd to the /opt folder. This is where we will install the Universal Forwarder. It should look like this:
   ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/c5842859-b857-455b-a092-73800b1df6d6)
 
 - Once we download it, we are going to untar the file with this command:
@@ -109,7 +109,22 @@
 
     ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/a033d71a-62f6-4af0-91da-bc3bb365756d)
 
-    
+- Go back to your Splunk server and click Search your data:
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/d6b3cc24-a84a-446a-bc79-da785fb8920e)
+
+- Once you are in, find the data summary, click it, and if it was all successful, you should see your host with 
+  IP address and the files you wanted to be indexed in the sources tab and it should look like this:
+
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/372a56e0-78ea-435a-8a9f-5c05509d32ee)
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/744d0302-c778-491b-88d3-9e0224331965)
+  ![register ](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/4e369534-0df9-4ed0-a0b6-8d34b70cffa8)
+
+
+
+# Congarts we have successfully configured a Splunk Server and Universal Forwarder to receive logs 
+
+  
+
 
 
     
