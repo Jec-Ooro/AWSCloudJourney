@@ -1,1 +1,1 @@
-# Setting up Nessus via EC2 to discover vulnerabilities
+# Setting up Nessus via AWS EC2 to discover vulnerabilities
