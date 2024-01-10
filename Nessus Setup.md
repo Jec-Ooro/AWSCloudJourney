@@ -128,9 +128,26 @@ aws s3 cp s3://my_bucket/my_file.ext my_copied_file.ext
   it should look like this:
 
 ![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/517e479d-3178-45ff-80ad-5fc07d50d467)
-  
-  
- 
+
+
+## Step 6 Run the scan 
+
+- We will run the scan to get the results. Here is the completed scan:
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/87e4189b-d2bb-4601-bbd0-f28d645b525c)
+
+As you can see, it was also a credentialed scan, and to check if it was for sure, you can go to the vulnerabilities. Then hit filter and 
+In the drop-down menu, find the plugin ID and type 19506.
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/5751cd85-5e30-4322-8674-4e2bd8498e09)
+
+- You will open the result and expand the output, and you should look for this:
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/e2fc24ae-3215-461b-ab7f-2db17c8b8ebf)
+
+- It was a successful credentialed scan
+
+## Congrats, you just set up a credentialed vulnerability scan with Nessus on your Redhat 9 EC2
 
 
 
