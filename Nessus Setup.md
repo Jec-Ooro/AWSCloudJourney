@@ -60,8 +60,46 @@ You must allow port 8834 to go through for your inbound rules on the second EC2 
 - Next, we will follow this link:https://community.tenable.com/s/article/SSH-Public-Key-Authentication?language=en_US
   to set up SSH public key authentication for scanning our second EC2 running redhat.
 
-- Log on to our second EC2 instance and we will follow the document but we will go away from it in certain parts to achive the same result
-- First we will create a user using the useradd command  
+- Log on to our second EC2 instance through SSH, and we will follow the document, but we will go away from it in certain parts to achieve the same result
+- First, we will create a user using the useradd command. It will look like this:
+  ```sh
+  useradd (whatever name you want)
+  ```
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/bd2cee6e-8c33-46e8-b520-b6c670f55fdb)
+
+- Additionally, we will make a directory labeled /home/cat_man/.ssh. We will do this with the mkdir command:
+  It will look this:
+  ```sh
+  mkdir /home/cat_scan/.ssh
+  ```
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/c5055c32-e565-49f9-b306-900c9695e1e8)
+
+- Next, we will now need to create an SSH key pair. It will create a public and private key. We are going to need to get the key into our second EC2 instance, which will be the public key
+  but the private key will be used for Nessus in the credentialed section.
+
+- We are going to create the Key pair in Powershell, and the command to do that is:
+  ```sh
+  ssh-keygen -t ecdsa -m pem
+  ```
+  You are going to hit enter until you get your randomart image it should look like this:
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/9ffd3a95-f4de-4f48-bf69-5906435b0e20)
+
+- it created two files, private and public keys, but to work on Nessus, it has to be a .pem file extension. We are going to change it to that.
+  We are going to go to the location where they are saved, open the id_ecdsa file, which is the private key with Notepad, choose save as, and change the extension
+  to .pem it should look like this:
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/fdf146ad-bf28-4d43-b619-eebeeb1926ff)
+
+- Once you save the file, we are going to go back to Nessus and put the username and the .pem file we just created in the credential tab
+  It should look like this:
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/f234db8b-6579-4c3a-8aef-36070d88725e)
+
+## Step 5 Moving the public key to our second EC2 instance
+
+- We will move the .pub file, which is the public key, to our second instance using the S3 bucket.
+  thw command to that is: 
+   
   
 
 
