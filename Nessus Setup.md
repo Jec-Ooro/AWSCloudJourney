@@ -97,8 +97,27 @@ You must allow port 8834 to go through for your inbound rules on the second EC2 
 
 ## Step 5 Moving the public key to our second EC2 instance
 
-- We will move the .pub file, which is the public key, to our second instance using the S3 bucket.
-  thw command to that is: 
+- We will move the .pub file, the public key, to our second instance using the S3 bucket.
+  The command to that is:
+  ```sh
+  aws s3 cp my_copied_file.ext s3://my_bucket/my_folder/my_file.ext
+  ```
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/13531615-ac9a-453c-8b1a-641942bfad07)
+
+- Once that is uploaded, we will go to our second EC2 instance and download it. The command for that is:
+```sh
+aws s3 cp s3://my_bucket/my_file.ext my_copied_file.ext
+```
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/8223689c-2bcd-4610-98ef-90251571f25b)
+
+- Next, we will go back to the document; we need to create an authorized_keys folder in the directory we made earlier and add the public key to it.
+  It should look like this:
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/624e45dd-e044-41ed-ae37-d2f736b8bb4e)
+
+
+
+
+  
    
   
 
