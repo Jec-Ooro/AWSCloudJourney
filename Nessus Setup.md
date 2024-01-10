@@ -61,9 +61,10 @@ You must allow port 8834 to go through for your inbound rules on the second EC2 
   to set up SSH public key authentication for scanning our second EC2 running redhat.
 
 - Log on to our second EC2 instance through SSH, and we will follow the document, but we will go away from it in certain parts to achieve the same result
-- First, we will create a user using the useradd command. It will look like this:
+- First, we will create a user using the useradd command and passwd for a password It will look like this:
   ```sh
   useradd (whatever name you want)
+  passwd (whatver name you want) 
   ```
 ![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/bd2cee6e-8c33-46e8-b520-b6c670f55fdb)
 
@@ -97,7 +98,7 @@ You must allow port 8834 to go through for your inbound rules on the second EC2 
 
 ## Step 5 Moving the public key to our second EC2 instance
 
-- We will move the .pub file, the public key, to our second instance using the S3 bucket.
+- We will move the .pub file and the public key to our second instance using the S3 bucket.
   The command to that is:
   ```sh
   aws s3 cp my_copied_file.ext s3://my_bucket/my_folder/my_file.ext
@@ -110,9 +111,26 @@ aws s3 cp s3://my_bucket/my_file.ext my_copied_file.ext
 ```
 ![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/8223689c-2bcd-4610-98ef-90251571f25b)
 
-- Next, we will go back to the document; we need to create an authorized_keys folder in the directory we made earlier and add the public key to it.
+- Next, we will go back to the document; we need to create an authorized_keys file in the directory we made earlier and add the public key.
   It should look like this:
 ![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/624e45dd-e044-41ed-ae37-d2f736b8bb4e)
+
+- Now, we will set the permissions on the files and directories we created. The commands will be:
+  ```sh
+  chown -R scan_man:scan_man /home/user-you-created/.ssh/
+  chmod 0600 /home/user-you-created/.ssh/authorized_keys
+  chmod 0700 /home/user-you-created/.ssh
+  ```
+  
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/542191ee-d35d-4e8c-a032-eee38dacc875)
+
+- Also, we will go back into the credential tab and set elevated privileges with sudo and you will also put the password of the user we created in sudo password.\
+  it should look like this:
+
+![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/517e479d-3178-45ff-80ad-5fc07d50d467)
+  
+  
+ 
 
 
 
