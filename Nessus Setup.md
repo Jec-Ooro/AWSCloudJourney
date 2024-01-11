@@ -147,7 +147,7 @@ In the drop-down menu, find the plugin ID and type 19506.
 
 - It was a successful credentialed scan
 
-## Congrats, you just set up a credentialed vulnerability scan with Nessus on your Redhat 9 EC2
+## Congrats, you just set up a credentialed vulnerability scan with Nessus expert  on your Redhat 9 EC2 instance 
 
 
 
