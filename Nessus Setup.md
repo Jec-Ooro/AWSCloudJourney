@@ -1,4 +1,4 @@
-# Setting up Nessus Expert via AWS EC2 to discover vulnerabilities
+# Setting up Nessus Expert via AWS EC2 to discover vulnerabilities on Redhat instances 
 
 ## Step 1 Download the necessary file
 - Go to this website:https://www.tenable.com/downloads/nessus?loginAttempted=true
