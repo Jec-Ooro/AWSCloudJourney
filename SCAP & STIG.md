@@ -136,7 +136,7 @@ It helps automate and streamline known vulnerability analysis, security configur
 
 
 
-# Congrats we successfully SCAP'ED & STIGE'D our Windows Server 2022 over 90%  
+# Congrats we successfully SCAP'D & STIG'D our Windows Server 2022 over 90%  
 
 
   
