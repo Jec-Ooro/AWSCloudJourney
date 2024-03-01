@@ -135,6 +135,7 @@ aws s3 cp s3://my_bucket/my_file.ext my_copied_file.ext
 - We will run the scan to get the results. Here is the completed scan:
 
 ![294723852-b608486d-20d9-4a12-a787-29cb6ed3c283](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/87e4189b-d2bb-4601-bbd0-f28d645b525c)
+![Screenshot 2024-03-01 123857](https://github.com/Jec-Ooro/AWSCloudJourney/assets/32017967/398b05af-35dc-4bc8-a80b-07767deb2bd9)
 
 As you can see, it was also a credentialed scan, and to check if it was for sure, you can go to the vulnerabilities. Then hit filter and 
 In the drop-down menu, find the plugin ID and type 19506.
